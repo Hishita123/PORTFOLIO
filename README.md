@@ -9,6 +9,6 @@ This is my personal portfolio website built to showcase my projects,skills,and c
 -Download Resume Button
 ##Live Demo
 [View  Portfolio]
-(https://Hishita123.github.io/portfolio/)
+https://Hishita123.github.io/PORTFOLIO/
 ##contact
 you can reach me at:vaddihishita@gmail.com
