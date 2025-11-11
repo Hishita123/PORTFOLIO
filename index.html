@@ -1,0 +1,88 @@
+<!DOCTYPE html><html>
+<head>
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body><button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+     <nav class="sidebar-nav">
+    <ul>
+      <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+      <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+      <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+      <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+    </ul>
+  </nav>
+     <header>
+    <div class="header-container">
+      <img src="profile.jpg" alt="My Photo" class="profile-img">
+      <div class="intro">
+        <h1>Hi, I'm Hishita</h1>
+        <p class="tagline">Aspiring Data Scientist and Web Devoloper🌱</p>
+        <p>
+          <a href="https://www.linkedin.com/in/hishita-vaddi-1a50a22a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="linkedin-link">LinkedIn Profile</a>
+        </p>
+      </div>
+    </div>
+    <button id="darkModeToggle" class="toggle-btn">🌙 Dark Mode</button>
+  </header>  <section id="about" class="section fade-in">
+    <h2>About Me</h2>
+    <p>I am currently a student and completed my internship at Cognifyz Technologies. I'm learning data science.</p>
+  </section>  <section id="education" class="section fade-in">
+    <h2>Education</h2>
+    <ul>
+      <li>B.Tech in DATA SCIENCE in Computer Science and Engineering - VIGNAN'S INSTITUTE OF INFORMATION TECHNOLOGY (2024–2027)</li>
+      <li>DIPLOMA - SAI GANAPATHI POLYTECHNIC COLLEGE (2021–2024)</li>
+    </ul>
+  </section>  <section id="skills" class="section fade-in">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span class="tag html">Python</span>
+      <span class="tag css">HTML & CSS</span>
+      <span class="tag js">Excel & Data Visualization</span>
+      <span class="tag py">JAVA</span>
+    </div>
+  </section>  <section id="projects" class="section fade-in">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Data Visualization in Excel</h3>
+        <p>Analyzed and presented data using Excel charts and dashboards.</p>
+      </div>
+      <div class ="project-card">
+        <h3>BioNexus</h3>
+        <p>A one and only centralized platform to match the stem cells and provides the best donor with including doctor consultancy and AI prescriptions</p>
+      </div>
+      <div class ="project-card">
+        <h3>Discount Hub</h3>
+        <p>A website which displays all discounts of ecommerce websites like meesho,flipkart and amazon. mainly designed to reduce waste of time of customers  </p>
+      </div>
+    </div>
+  </section>  <section id="contact" class="section fade-in">
+    <h2>Contact</h2>
+    <p>Email: vaddihishita@gmail.com</p>
+    <a href="resume.pdf" download>
+      <button>Download Resume</button>
+    </a>
+  </section>  <footer>
+    <p>© 2025 Hishita Vaddi. All rights reserved.</p>
+  </footer>  <script>
+    const toggleBtn = document.getElementById('darkModeToggle');
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  </script><script>
+  function toggleSidebar() {
+    document.querySelector('.sidebar-nav').classList.toggle('show');
+  }
+</script></body>
+</html>

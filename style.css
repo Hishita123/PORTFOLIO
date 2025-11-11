@@ -1,0 +1,359 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e0f7fa, #fff3e0);
+    color: #333;
+  }
+  
+  h1, h2 {
+    color: #2e2e2e;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding-left: 20px;
+  }
+  
+  ul li::before {
+    content: "▸ ";
+    color: #4CAF50;
+    font-weight: bold;
+    margin-right: 8px;
+  }
+  
+  section {
+    margin: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  /* Header Styles */
+  header {
+    padding: 20px;
+    background: linear-gradient(to right, #2196f3, #21cbf3);
+    color: white;
+    position: relative;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .profile-img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  
+  .intro h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  
+  .tagline {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #e0f7fa;
+    margin-top: 4px;
+  }
+  
+  .linkedin-link {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  /* Skills Section with Color Tags */
+  .skills {
+    margin-top: 10px;
+  }
+  
+  .skills .tag {
+    display: inline-block;
+    padding: 8px 14px;
+    margin: 6px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    color: white;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: transform 0.2s ease;
+  }
+  
+  .skills .tag:hover {
+    transform: scale(1.1);
+  }
+  
+  .tag.html { background-color: #e44d26; }
+  .tag.css  { background-color: #2965f1; }
+  .tag.js   { background-color: #f7df1e; color: #222; }
+  .tag.py   { background-color: #4B8BBE; }
+  
+  /* Project Card Styles */
+  .projects {
+    display: grid;
+    gap: 20px;
+  }
+  
+  .project-card {
+    background: #f4f4f4;
+    padding: 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .project-card.alt {
+    background: #e0f2f1;
+  }
+  
+  /* Download Button */
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 16px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #263238;
+    color: #cfd8dc;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+  }
+  
+  /* Fade-in Animation */
+  .section.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Layout */
+  @media (max-width: 600px) {
+    .header-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .profile-img {
+      width: 70px;
+    }
+  
+    .intro h1 {
+      font-size: 1.6em;
+    }
+  
+    .tagline {
+      font-size: 1em;
+    }
+  }
+  
+  /* === Dark Mode Toggle Button === */
+  .toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  .toggle-btn:hover {
+    background-color: #555;
+  }
+  
+  /* === Dark Mode Theme === */
+  body.dark-mode {
+    background: linear-gradient(to right, #1a1a1a, #333);
+    color: #eee;
+  }
+  
+  body.dark-mode header {
+    background: linear-gradient(to right, #111, #222);
+    color: #eee;
+  }
+  
+  body.dark-mode section {
+    background: #222;
+    color: #eee;
+    box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+  }
+  
+  body.dark-mode ul li::before {
+    color: #00e676;
+  }
+  
+  body.dark-mode footer {
+    background-color: #121212;
+    color: #bbb;
+  }
+  
+  body.dark-mode .linkedin-link {
+    color: #90caf9;
+  }
+  
+  body.dark-mode .toggle-btn {
+    background-color: #eee;
+    color: #111;
+  }
+  /* === Sticky Left Sidebar Navigation === */
+.sidebar-nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 160px;
+    height: calc(100% - 80px);
+    background-color: #f5f5f5;
+    padding-top: 20px;
+    border-right: 1px solid #ddd;
+    z-index: 100;
+  }
+  
+  .sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-nav ul li {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  /* === Light Pink Sidebar Navigation === */
+.sidebar-nav {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 160px;
+    height: calc(100% - 80px);
+    background-color: #ffe6f0; /* light pink */
+    padding-top: 20px;
+    border-right: 1px solid #f8c6da;
+    z-index: 100;
+  }
+  
+  .sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar-nav ul li {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .sidebar-nav ul li a {
+    text-decoration: none;
+    color: #aa336a;
+    font-weight: 500;
+    padding: 8px 12px;
+    display: block;
+    transition: background 0.3s, color 0.3s;
+    border-radius: 6px;
+  }
+  
+  .sidebar-nav ul li a:hover {
+    background-color: #f9c5d5;
+    color: #7a1e4d;
+  }
+  body.dark-mode .sidebar-nav {
+    background-color: #3a2d3d;
+    border-right: 1px solid #5c475c;
+  }
+  
+  body.dark-mode .sidebar-nav ul li a {
+    color: #ffd1e8;
+  }
+  
+  body.dark-mode .sidebar-nav ul li a:hover {
+    background-color: #d17dbd;
+    color: #000;
+  }
+  .sidebar-nav ul li a i {
+    margin-right: 8px;
+  }
+  .menu-toggle {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background-color: #f8bbd0;
+    color: #6a1b4d;
+    border: none;
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 6px;
+    z-index: 200;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .menu-toggle:hover {
+    background-color: #f48fb1;
+  }
+  
+  /* Mobile Responsive Sidebar */
+  @media (max-width: 768px) {
+    .sidebar-nav {
+      display: none;
+      position: fixed;
+      left: 0;
+      top: 60px;
+      width: 100%;
+      height: auto;
+      background-color: #ffe6f0;
+      border-right: none;
+      padding-bottom: 20px;
+    }
+  
+    .sidebar-nav.show {
+      display: block;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    header, section, footer {
+      margin-left: 0px;
+    }
+  }
+  /* Push all content to the right so it's not under the sidebar */
+header, .header-container, section, footer {
+    margin-left: 180px;
+  }
